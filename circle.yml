@@ -13,7 +13,7 @@ dependencies:
     - mkdir packages
     - echo -e "$RSA_PUBLIC_KEY" > packages/sgerrand.rsa.pub
   override:
-    - docker run -e RSA_PRIVATE_KEY="$RSA_PRIVATE_KEY" -e RSA_PRIVATE_KEY_NAME="sgerrand.rsa" -v $(pwd):/home/builder/package -v $(pwd)/packages:/home/builder/packages sgerrand/alpine-abuild
+    - docker run -e RSA_PRIVATE_KEY="$RSA_PRIVATE_KEY" -e RSA_PRIVATE_KEY_NAME="sgerrand.rsa" -v $(pwd):/home/builder/package -v $(pwd)/packages:/home/builder/packages makorne/alpine-abuild
 
 test:
   override:
@@ -22,13 +22,13 @@ test:
 deployment:
   release:
     tag: /[0-9]+(\.[0-9]+){1,2}(\-r\d+)?$/
-    owner: sgerrand
+    owner: makorne
     commands:
-      - ghr -u sgerrand $CIRCLE_TAG packages/
-      - ghr -u sgerrand $CIRCLE_TAG packages/builder/x86_64
+      - ghr -u makorne $CIRCLE_TAG packages/
+      - ghr -u makorne $CIRCLE_TAG packages/builder/x86_64
   master:
     branch: master
-    owner: sgerrand
+    owner: makorne
     commands:
-      - ghr -u sgerrand --prerelease --delete unreleased packages
-      - ghr -u sgerrand --prerelease unreleased packages/builder/x86_64
+      - ghr -u makorne --prerelease --delete unreleased packages
+      - ghr -u makorne --prerelease unreleased packages/builder/x86_64
