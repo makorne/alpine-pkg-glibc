@@ -21,7 +21,7 @@ test:
 
 deployment:
   release:
-    tag: /[0-9]+(\.[0-9]+){1,2}(\-r\d+)?$/
+    tag: /[0-9]+(\.[0-9]+){1,2}(\-r)?$/
     owner: makorne
     commands:
       - ghr -u makorne $CIRCLE_TAG packages/
