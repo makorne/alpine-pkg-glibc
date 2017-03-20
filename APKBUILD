@@ -2,8 +2,8 @@
 
 pkgname="glibc"
 pkgver="2.19"
-_pkgrel="0"
-pkgrel="1"
+pkgrel="0"
+_pkgrel="1"
 pkgdesc="GNU C Library compatibility layer"
 arch="x86_64"
 url="https://github.com/makorne/alpine-pkg-glibc"
