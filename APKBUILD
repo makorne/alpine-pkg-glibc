@@ -45,3 +45,12 @@ i18n() {
   mkdir -p "$subpkgdir"/usr/glibc-compat
   cp -a "$srcdir"/usr/glibc-compat/share "$subpkgdir"/usr/glibc-compat
 }
+md5sums="1569c5b69400405bc898330a1db1631b  glibc-bin-2.19-0-x86_64.tar.gz
+5be984273de4203318c9c3fb0d4e9d2b  nsswitch.conf
+0484678534996fdddef848544bd1a12d  ld.so.conf"
+sha256sums="8966cf0c8e4a5083c10ce876fcdd4c1c1c75ade8ac8b272043336fdebfa00acb  glibc-bin-2.19-0-x86_64.tar.gz
+3be94785355b4b363d1268f133e198323441eafa6017b2b1fed32ae279d685c7  nsswitch.conf
+f8eec838bace59c29a5dc04550f60e3c7ba9f3a9df7b14dae36349ad90152e00  ld.so.conf"
+sha512sums="52454944bd48bc146431e6e1bb21cc7c4424f016ae19562322dbbd597bc124fa08116eeaa4225eac7bfb6b1bf9436a7840faaf6b91bc0c4ba998cdddfccaae36  glibc-bin-2.19-0-x86_64.tar.gz
+478bdd9f7da9e6453cca91ce0bd20eec031e7424e967696eb3947e3f21aa86067aaf614784b89a117279d8a939174498210eaaa2f277d3942d1ca7b4809d4b7e  nsswitch.conf
+2912f254f8eceed1f384a1035ad0f42f5506c609ec08c361e2c0093506724a6114732db1c67171c8561f25893c0dd5c0c1d62e8a726712216d9b45973585c9f7  ld.so.conf"
