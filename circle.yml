@@ -32,3 +32,4 @@ deployment:
     commands:
       - ghr -u makorne --prerelease --delete unreleased packages
       - ghr -u makorne --prerelease unreleased packages/builder/x86_64
+
