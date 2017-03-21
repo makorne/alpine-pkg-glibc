@@ -45,6 +45,7 @@ i18n() {
   mkdir -p "$subpkgdir"/usr/glibc-compat
   cp -a "$srcdir"/usr/glibc-compat/share "$subpkgdir"/usr/glibc-compat
 }
+
 md5sums="1569c5b69400405bc898330a1db1631b  glibc-bin-2.19-0-x86_64.tar.gz
 5be984273de4203318c9c3fb0d4e9d2b  nsswitch.conf
 0484678534996fdddef848544bd1a12d  ld.so.conf"
